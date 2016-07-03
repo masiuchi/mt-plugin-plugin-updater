@@ -1,0 +1,8 @@
+name: PluginUpdater
+
+tasks:
+  UpdatePlugins:
+    label: Update plugins
+    frequency: "sub { $MT::DebugMode ? 1 : 86400 }"
+    code: $PluginUpdater::MT::Plugin::PluginUpdater::code
+
